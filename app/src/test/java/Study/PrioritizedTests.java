@@ -15,6 +15,6 @@ public class PrioritizedTests {
 
     @Test(priority = 1)
     public void theThirdTestP1() {
-        System.out.println("theSecondTestP1");
+        System.out.println("theThirdTestP1");
     }
 }

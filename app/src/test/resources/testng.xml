@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteOne">
+    <test name="Simple Test Setup Teardown">
+        <classes>
+            <class name="Study.SimpleTestSetupTeardown"/>
+        </classes>
+    </test>
+    <test name="Test Groups">
+        <groups>
+            <run>
+                <include name="mainGroup"/>
+                <exclude name="WIP"/>
+            </run>
+            <dependencies>
+                <group name="groupOne" depends-on="dependency"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="Study.SeveralTestGroups"/>
+        </classes>
+    </test>
+    <test name="Parametrized tests">
+        <parameter name="parameterOne" value="p1"/>
+        <parameter name="parameterTwo" value="p2"/>
+        <classes>
+            <class name="Study.ParameterizedTests"/>
+        </classes>
+    </test>
+    <test name="Proritized tests">
+        <classes>
+            <class name="Study.PrioritizedTests"/>
+        </classes>
+    </test>
+</suite>
